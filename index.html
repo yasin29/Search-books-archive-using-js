@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css only  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Book Archive</title>
+    <style>
+        #noResultFound {
+            display: none;
+        }
+
+        #loading-spin {
+            display: none;
+        }
+
+        #bgColor {
+            background-color: #C0C0C0;
+        }
+    </style>
+</head>
+
+<body id="bgColor" class="m-5">
+    <!-- input and search field  -->
+    <h1 class="text-center text-success display-2">Book Archive</h1>
+    <div class="input-group mb-3 w-50 mx-auto">
+        <input id="input-field" type="text" class="form-control" placeholder="search your book..."
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick="searchClicked()" class="btn btn-outline-light bg-info" type="button"
+            id="button-addon2">Search</button>
+    </div>
+    <!-- total  result number  -->
+    <div id="totalResult">
+
+    </div>
+    <!-- booklist  -->
+    <div id="bookResult" class="row row-cols-1 row-cols-md-3 g-5 w-75 mx-auto">
+
+    </div>
+    <!-- spinner loading  -->
+    <h3 id="loading-spin" class="text-center m-5 text-primary">Loading... <span class="spinner-border"
+            role="status"></span>
+    </h3>
+    <!-- no result found  -->
+    <h1 class="text-center mt-5 text-danger" id="noResultFound"> No Result Found</h1>
+
+    <!-- script js  -->
+    <script src="book.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
